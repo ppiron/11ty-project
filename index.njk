@@ -3,14 +3,16 @@ layout: base.njk
 title: prendi
 ---
 
-<div>pippo</div>
 <div
   class="max-w-screen-md flex gap-12 justify-between bg-stone-50 mx-auto p-6 rounded"
 >
-  <div class="prose prose-indigo">{% renderFile "./_includes/pippo1.md" %}</div>
+  <div class="prose">{% renderFile "./posts/pippo1.md" %}</div>
   <img
     class="max-h-40 rounded shadow-stone-500 shadow-md"
     src="https:/picsum.photos/300/200"
     alt=""
   />
+</div>
+<div class="prose max-w-screen-md bg-stone-50 mx-auto p-6 rounded mt-6">
+  {% renderFile "./posts/post2.md" %}
 </div>
