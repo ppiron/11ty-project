@@ -1,7 +1,7 @@
 ---
-layout: base.njk
-image: ../../img/img1.jpg
+title: page 2
+image: /img/img2.webp
 ---
 
 Poroendi
-![pippo]({{image|url}})
+![pippo]({{ image|url }})
