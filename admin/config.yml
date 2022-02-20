@@ -1,0 +1,28 @@
+local_backend: true
+backend:
+  name: git-gateway
+media_folder: "img"
+collections:
+  - name: posts
+    label: "Posts"
+    folder: "posts"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Images"
+    name: images
+    files:
+      - label: "Home Page"
+        name: home
+        file: "_data/home.json"
+        fields:
+          - { label: Image, name: image, widget: image }
+      - label: "Photo Gallery"
+        name: photo_gallery
+        file: "_data/media.json"
+        fields:
+          - label: Gallery
+            name: gallery
+            widget: list
+            field: { label: Image, name: image, widget: image }
