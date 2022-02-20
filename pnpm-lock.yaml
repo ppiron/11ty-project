@@ -2,6 +2,10 @@ lockfileVersion: 5.3
 
 specifiers:
   '@11ty/eleventy': ^1.0.0
+  markdown-it-front-matter: ^0.2.3
+
+dependencies:
+  markdown-it-front-matter: 0.2.3
 
 devDependencies:
   '@11ty/eleventy': 1.0.0
@@ -1300,6 +1304,10 @@ packages:
     resolution: {integrity: sha512-gv6jZCV+gGIrVKhO90yrsn8qXPKD8HYZJtrUDSfEbow8Tkw84T9OnCyJhWvnJIaIF/tBuiAjZuQHUt1LddX2mg==}
     engines: {node: '>=12'}
     dev: true
+
+  /markdown-it-front-matter/0.2.3:
+    resolution: {integrity: sha512-s9+rcClLmZsZc3YL8Awjg/YO/VdphlE20LJ9Bx5a8RAFLI5a1vq6Mll8kOzG6w/wy8yhFLBupaa6Mfd60GATkA==}
+    dev: false
 
   /markdown-it/12.3.2:
     resolution: {integrity: sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==}
