@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Classes
+---
+
+<div class="max-w-screen-md p-6 mx-auto mt-6 rounded">
+  <div class="prose prose-stone max-w-none">
+    {% renderFile "./posts/classes1.md" %}
+  </div>
+  <div class="flex justify-between gap-12 mt-12">
+    <div class="prose prose-stone max-w-none">
+      {% renderFile "./posts/classes2.md" %}
+    </div>
+    <img class="mt-16 rounded max-h-60" src="{{ classes.image }}" alt="" />
+  </div>
+  <div class="mt-12 prose prose-stone max-w-none">
+    {% renderFile "./posts/classes3.md" %}
+  </div>
+</div>
