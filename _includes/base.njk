@@ -11,6 +11,17 @@ title: pippo
     <title>{{ title }}</title>
   </head>
   <body class="py-6">
+    <header class="max-w-screen-md mx-auto">
+      <div class="w-full">
+        <img
+          class="object-cover w-full shadow-md shadow-slate-400"
+          src="/img/header-blue.png"
+          alt="header"
+        />
+      </div>
+    </header>
+    {% include "nav.njk" %}
     {{ content | safe }}
+    {% include "nav.njk" %}
   </body>
 </html>

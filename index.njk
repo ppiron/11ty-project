@@ -1,24 +1,24 @@
 ---
 layout: base.njk
-title: prendi
+title: Home
 ---
 
 <div
-  class="max-w-screen-md flex gap-12 justify-between bg-stone-100 mx-auto p-6 rounded"
+  class="flex justify-between max-w-screen-md gap-12 p-6 mx-auto mt-6 rounded bg-stone-100"
 >
   <div class="prose">{% renderFile "./posts/pippo1.md" %}</div>
   <img
-    class="max-h-40 rounded shadow-stone-500 shadow-md"
+    class="rounded shadow-md max-h-40 shadow-stone-500"
     src="{{ home.image }}"
     alt=""
   />
 </div>
-<div class="prose max-w-screen-md bg-stone-100 mx-auto p-6 rounded mt-6">
+<div class="max-w-screen-md p-6 mx-auto mt-6 prose rounded bg-stone-100">
   {% renderFile "./posts/post2.md" %}
 </div>
-<div class="prose max-w-screen-md bg-stone-100 mx-auto p-6 rounded mt-6">
+<div class="max-w-screen-md p-6 mx-auto mt-6 prose rounded bg-stone-100">
   <img
-    class="max-h-40 rounded shadow-stone-500 shadow-md"
+    class="rounded shadow-md max-h-40 shadow-stone-500"
     src="{{ media.gallery[0] }}"
     alt=""
   />
