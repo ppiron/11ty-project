@@ -12,18 +12,24 @@ title: About
     <p><strong>You can also contact me using the form below:</strong></p>
     <form
       action=""
-      class="flex flex-col items-center max-w-xl p-6 mx-auto divide-y-[20px] divide-transparent rounded-md border-stone-400/70"
+      class="flex flex-col items-center max-w-xl p-6 mx-auto divide-y-[20px] divide-transparent rounded-md"
     >
-      <label for="name" class="flex flex-col w-[400px]">
+      <label
+        for="name"
+        class="flex flex-col w-full max-w-[400px] min-w-[300px]"
+      >
         <span class="text-sm font-semibold text-stone-700/80">Your name</span>
         <input
-          class="rounded border-stone-400/70 focus:ring-[#f1bebf] focus:border-[#f1bebf]"
+          class="rounded border-stone-400/70 focus:ring-[#f1bebf] focus:border-[#f1bebf] w-full"
           type="text"
           name="name"
           id="name"
         />
       </label>
-      <label for="email" class="flex flex-col w-[400px]">
+      <label
+        for="email"
+        class="flex flex-col w-full max-w-[400px] min-w-[300px]"
+      >
         <span class="text-sm font-semibold text-stone-700/80"
           >Email address</span
         >
@@ -35,7 +41,10 @@ title: About
           placeholder="john@example.com"
         />
       </label>
-      <label for="message" class="flex flex-col w-[400px] relative">
+      <label
+        for="message"
+        class="flex flex-col w-full max-w-[400px] min-w-[300px] relative"
+      >
         <span class="text-sm font-semibold text-stone-700/80"
           >Your message</span
         >
