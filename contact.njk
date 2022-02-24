@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: About
+---
+
+<div class="max-w-screen-md p-6 mx-auto mt-6 rounded">
+  <div class="prose prose-stone max-w-none">
+    <h2 class="">Contact Details</h2>
+    <p>
+      Telephone: &nbsp;07961 619 168, Address: &nbsp;69 Carnbee Park EH16 6GG
+    </p>
+    <p><strong>You can also contact me using the form below:</strong></p>
+    <form
+      action=""
+      class="flex flex-col items-center max-w-xl p-6 mx-auto divide-y-[20px] divide-transparent rounded-md border-stone-400/70"
+    >
+      <label for="name" class="flex flex-col w-[400px]">
+        <span class="text-sm font-semibold text-stone-700/80">Your name</span>
+        <input
+          class="rounded border-stone-400/70 focus:ring-[#f1bebf] focus:border-[#f1bebf]"
+          type="text"
+          name="name"
+          id="name"
+        />
+      </label>
+      <label for="email" class="flex flex-col w-[400px]">
+        <span class="text-sm font-semibold text-stone-700/80"
+          >Email address</span
+        >
+        <input
+          class="rounded border-stone-400/70 focus:ring-[#f1bebf] focus:border-[#f1bebf]"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john@example.com"
+        />
+      </label>
+      <label for="message" class="flex flex-col w-[400px] relative">
+        <span class="text-sm font-semibold text-stone-700/80"
+          >Your message</span
+        >
+        <textarea
+          class="resize-none rounded border-stone-400/70 focus:ring-[#f1bebf] focus:border-[#f1bebf]"
+          name="message"
+          id="message"
+          cols="30"
+          rows="7"
+        ></textarea>
+        <button
+          class="absolute bottom-2 right-2 bg-[#8edafb] hover:bg-[#c8eefe] text-stone-900 rounded px-4 py-[6px] text-sm"
+          type="submit"
+        >
+          Send
+        </button>
+      </label>
+    </form>
+  </div>
+</div>
