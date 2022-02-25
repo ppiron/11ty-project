@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Media
+---
+
+<div class="max-w-screen-md p-6 mx-auto mt-6 rounded">
+  <div class="prose prose-stone max-w-none">
+    {% renderFile "./posts/media1.md" %}
+  </div>
+  <div class="mt-12">
+    <div class="grid justify-center gap-4 gallery">
+      {%for photo in media.photos %}
+      <div class="max-h-48">
+        <img class="object-cover w-full h-full rounded" src="{{ photo }}" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
