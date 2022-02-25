@@ -1,3 +1,10 @@
 {
-  "image": "/img/img1.jpg"
+  "image": "/img/pupils.jpg",
+  "icons": [
+    "/img/abrsm.jpg",
+    "/img/trinity.png",
+    "/img/epta.jpg",
+    "/img/lcme.jpg"
+  ],
+  "social": ["/img/watchus.jpg", "/img/likeus.jpg"]
 }

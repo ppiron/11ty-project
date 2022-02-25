@@ -3,23 +3,37 @@ layout: base.njk
 title: Home
 ---
 
-<div
-  class="flex justify-between max-w-screen-md gap-12 p-6 mx-auto mt-6 rounded bg-stone-100"
->
-  <div class="prose">{% renderFile "./posts/pippo1.md" %}</div>
-  <img
-    class="rounded shadow-md max-h-40 shadow-stone-500"
-    src="{{ home.image }}"
-    alt=""
-  />
-</div>
-<div class="max-w-screen-md p-6 mx-auto mt-6 prose rounded bg-stone-100">
-  {% renderFile "./posts/post2.md" %}
-</div>
-<div class="max-w-screen-md p-6 mx-auto mt-6 prose rounded bg-stone-100">
-  <img
-    class="rounded shadow-md max-h-40 shadow-stone-500"
-    src="{{ media.gallery[0] }}"
-    alt=""
-  />
+<div class="max-w-screen-md p-6 mx-auto mt-6 rounded">
+  <div class="prose prose-stone max-w-none">
+    {% renderFile "./posts/home1.md" %}
+  </div>
+  <div class="mt-12">
+    <img
+      class="hidden mt-12 rounded shadow-md max-w-[40%] sm:block sm:float-right sm:ml-8 shadow-stone-500/50"
+      src="{{ home.image }}"
+      alt=""
+    />
+    <div class="prose prose-stone max-w-none">
+      {% renderFile "./posts/home2.md" %}
+    </div>
+  </div>
+  <div class="mt-12 prose prose-stone max-w-none">
+    {% renderFile "./posts/home3.md" %}
+  </div>
+  <div class="mt-8 -mx-6 -mb-6 sm:justify-between sm:flex">
+    <div class="flex gap-1">
+      {%for icon in home.icons %}
+      <div class="flex-shrink object-cover">
+        <img class="w-full max-h-12" src="{{ icon }}" />
+      </div>
+      {% endfor %}
+    </div>
+    <div class="flex gap-1 mt-4 sm:mt-0">
+      {%for icon in home.social %}
+      <div class="flex-shrink object-cover">
+        <img class="w-full max-h-12" src="{{ icon }}" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
