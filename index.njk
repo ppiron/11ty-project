@@ -20,15 +20,15 @@ title: Home
   <div class="mt-12 prose prose-stone max-w-none">
     {% renderFile "./posts/home3.md" %}
   </div>
-  <div class="mt-8 -mx-6 -mb-6 sm:justify-between sm:flex">
-    <div class="flex gap-1">
+  <div class="mt-12 -mb-6 md:-mx-6 sm:justify-between sm:flex">
+    <div class="flex justify-center gap-1 sm:justify-start">
       {%for icon in home.icons %}
       <div class="flex-shrink object-cover">
         <img class="w-full max-h-12" src="{{ icon }}" />
       </div>
       {% endfor %}
     </div>
-    <div class="flex gap-1 mt-4 sm:mt-0">
+    <div class="flex justify-center gap-1 mt-4 sm:justify-start sm:mt-0">
       {%for icon in home.social %}
       <div class="flex-shrink object-cover">
         <img class="w-full max-h-12" src="{{ icon }}" />
