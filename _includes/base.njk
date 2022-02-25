@@ -9,6 +9,11 @@ title: pippo
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <title>{{ title }}</title>
+    <style>
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
+      }
+    </style>
   </head>
   <body class="py-6">
     <header class="max-w-screen-md mx-auto">
