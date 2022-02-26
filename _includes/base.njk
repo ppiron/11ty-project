@@ -14,6 +14,9 @@ title: pippo
         grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
       }
     </style>
+    {%if js %}
+    <script defer src="{{ js }}"></script>
+    {% endif %}
   </head>
   <body class="py-6">
     <header class="max-w-screen-md mx-auto">
