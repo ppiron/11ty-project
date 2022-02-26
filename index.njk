@@ -1,18 +1,57 @@
 ---
 layout: base.njk
 title: Home
+js: "https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
 ---
 
 <div class="max-w-screen-md p-6 mx-auto mt-6 rounded">
   <div class="prose prose-stone max-w-none">
     {% renderFile "./posts/home1.md" %}
   </div>
-  <div class="mt-12">
+  <div
+    x-data="{ open: false }"
+    class="flex flex-col-reverse items-center mt-12 sm:block"
+  >
     <img
-      class="hidden mt-12 rounded shadow-md max-w-[40%] sm:block sm:float-right sm:ml-8 shadow-stone-500/50"
+      x-on:click="open = true"
+      class="mt-12 sm:max-w-[45%] sm:block sm:float-right sm:ml-8 border border-stone-800/80 cursor-zoom-in"
       src="{{ home.image }}"
       alt=""
     />
+    <div
+      x-show="open"
+      style="display: none"
+      x-on:keydown.escape.window.prevent.stop="open = false; showimage = false"
+      class="fixed inset-0 overflow-y-auto"
+    >
+      <!-- Overlay -->
+      <div
+        x-show="open"
+        x-transition.opacity
+        class="fixed inset-0 bg-opacity-50 bg-stone-700"
+      ></div>
+      <div
+        x-data="{ showimage: false }"
+        x-show="open"
+        x-transition:enter.duration.300ms
+        x-on:click="open = false; showimage = false"
+        x-on:transitionend="showimage = true"
+        class="relative flex items-center justify-center min-h-screen p-4"
+      >
+        <div
+          x-on:click.stop
+          x-trap.noscroll.inert="open"
+          class="relative w-[672px] aspect-[1.49] bg-white border p-8 border-black overflow-hidden box-content"
+        >
+          <img
+            x-show="showimage"
+            x-transition:enter.duration.50ms
+            src="{{ home.image_large }}"
+            alt="pupils"
+          />
+        </div>
+      </div>
+    </div>
     <div class="prose prose-stone max-w-none">
       {% renderFile "./posts/home2.md" %}
     </div>
@@ -23,16 +62,23 @@ title: Home
   <div class="mt-12 -mb-6 md:-mx-6 sm:justify-between sm:flex">
     <div class="flex justify-center gap-1 sm:justify-start">
       {%for icon in home.icons %}
-      <div class="flex-shrink object-cover">
-        <img class="w-full max-h-12" src="{{ icon }}" />
-      </div>
+      <a href="{{ icon.link }}" target="_blank">
+        <div class="flex-shrink object-cover">
+          <img class="w-full max-h-12" src="{{ icon.thumb }}" />
+        </div>
+      </a>
       {% endfor %}
     </div>
     <div class="flex justify-center gap-1 mt-4 sm:justify-start sm:mt-0">
       {%for icon in home.social %}
-      <div class="flex-shrink object-cover">
-        <img class="w-full max-h-12" src="{{ icon }}" />
-      </div>
+      <a
+        href="{{ icon.link }}"
+        target="{{ '_blank' if icon.link != '/media/' }}"
+      >
+        <div class="flex-shrink object-cover">
+          <img class="w-full max-h-12" src="{{ icon.thumb }}" />
+        </div>
+      </a>
       {% endfor %}
     </div>
   </div>

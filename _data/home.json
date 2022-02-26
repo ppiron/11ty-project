@@ -1,10 +1,17 @@
 {
   "image": "/img/pupils.jpg",
+  "image_large": "/img/pupils-enlarged.jpg",
   "icons": [
-    "/img/abrsm.jpg",
-    "/img/trinity.png",
-    "/img/epta.jpg",
-    "/img/lcme.jpg"
+    { "thumb": "/img/abrsm.jpg", "link": "https://www.abrsm.org" },
+    { "thumb": "/img/trinity.png", "link": "https://www.trinitycollege.com" },
+    { "thumb": "/img/epta.jpg", "link": "https://www.epta-europe.org" },
+    { "thumb": "/img/lcme.jpg", "link": "https://www.lcme.uwl.ac.uk" }
   ],
-  "social": ["/img/watchus.jpg", "/img/likeus.jpg"]
+  "social": [
+    { "thumb": "/img/watchus.jpg", "link": "/media/" },
+    {
+      "thumb": "/img/likeus.jpg",
+      "link": "https://www.facebook.com/AllegranDo/"
+    }
+  ]
 }
