@@ -2,6 +2,4 @@
 title: Media 1/2
 ---
 
-## Photo
-
-Click photo to enlarge it.
+Click on a photo to enlarge it.

@@ -3,7 +3,9 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("posts");
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("js");
+  // eleventyConfig.addPassthroughCopy("posts");
 
   let markdownIt = require("markdown-it");
   let markdownItFM = require("markdown-it-front-matter");
