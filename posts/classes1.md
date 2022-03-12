@@ -1,5 +1,5 @@
 ---
-title: classes 1/3
+title: classes
 ---
 
 I teach with passion, positivity and patience and believe that the best learning takes place through fun, discovery and encouragement! I use an integrated approach based on best piano traditions and recent research in education.

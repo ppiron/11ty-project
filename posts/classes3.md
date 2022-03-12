@@ -1,5 +1,5 @@
 ---
-title: classes 3/3
+title: classes
 ---
 
 ## Piano Lessons for Intermediate and Advanced Levels

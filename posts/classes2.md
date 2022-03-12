@@ -1,5 +1,5 @@
 ---
-title: classes 2/3
+title: classes
 ---
 
 ## Piano Lessons for Adult Beginners
