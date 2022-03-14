@@ -25,7 +25,7 @@ js:
     <div
       x-show="open"
       style="display: none"
-      x-on:keydown.escape.window.prevent.stop="open = false; showimage = false"
+      x-on:keydown.escape.window.prevent.stop="open = false"
       class="fixed inset-0 overflow-y-auto"
     >
       <!-- Overlay -->
@@ -35,11 +35,12 @@ js:
         class="fixed inset-0 bg-opacity-50 bg-stone-700"
       ></div>
       <div
-        x-data="{ showimage: false }"
+        {# x-data="{ showimage: false }" #}
         x-show="open"
         x-transition:enter.duration.300ms
-        x-on:click="open = false; showimage = false"
-        x-on:transitionend.self="showimage = true"
+        {# x-on:click="open = false; showimage = false" #}
+        x-on:click="open = false"
+        {# x-on:transitionend.self="showimage = true" #}
         class="relative flex items-center justify-center min-h-screen p-4"
       >
         <div
@@ -48,7 +49,7 @@ js:
           class="relative w-[672px] aspect-[1.49] bg-white border p-8 border-black overflow-hidden box-content"
         >
           <img
-            x-show="showimage"
+            {# x-show="showimage" #}
             x-transition:enter.duration.50ms
             src="{{ home.image_large }}"
             alt="pupils"

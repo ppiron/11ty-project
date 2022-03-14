@@ -50,7 +50,7 @@ js_no_defer: ["/js/media.js"]
     <div
       x-show="open"
       style="display: none"
-      x-on:keydown.escape.window.prevent.stop="open = false; showimage = false"
+      x-on:keydown.escape.window.prevent.stop="open = false"
       class="fixed inset-0 overflow-y-auto"
     >
       <!-- Overlay -->
@@ -60,12 +60,9 @@ js_no_defer: ["/js/media.js"]
         class="fixed inset-0 bg-stone-700/70"
       ></div>
       <div
-        {# x-data="{ showimage: false }" #}
         x-show="open"
         x-transition:enter.duration.300ms
         x-on:click="open = false; selected=0"
-        {# x-on:click="open = false; showimage = false; selected=0" #}
-        {# x-on:transitionend.self="showimage = true; scroll()" #}
         class="relative flex items-center justify-center min-h-screen p-4"
       >
         <!-- Carousel -->
@@ -95,15 +92,12 @@ js_no_defer: ["/js/media.js"]
             x-ref="container"
             x-on:click.stop
             x-on:scroll.throttle.20ms="onscroll()"
-            {# x-on:scroll.throttle.100ms="showimage && onscroll()" #}
             x-trap.noscroll.inert="open"
             class="w-[768px] aspect-[1.49] bg-white overflow-x-scroll flex snap-x snap-mandatory scroll-smooth outline-none carousel"
           >
             <template x-for="(photo, index) in photos">
               <li class="w-full p-2 snap-start shrink-0">
                 <img
-                  {# x-show="showimage" #}
-                  {# x-transition:enter.duration.50ms #}
                   :src="photo"
                   class="w-full aspect-[1.54] object-cover"
                   alt="endi"
@@ -147,8 +141,6 @@ js_no_defer: ["/js/media.js"]
   <div x-data="video_modal" class="mt-12">
   {# Video Gallery #}
     <div class="grid justify-center grid-cols-1 gap-4 sm:grid-cols-3">
-    {# <div class="gap-4 columns-2 sm:columns-3"> #}
-    
       {%for video in media.videos %}
       <div x-on:click="toggle({{ loop.index0 }})">
         <div x-show="!(play && selected === {{ loop.index0 }})" class="flex flex-col items-center cursor-pointer group">
@@ -165,7 +157,6 @@ js_no_defer: ["/js/media.js"]
         </div>
         <template x-if="(play && selected === {{ loop.index0 }})">
           <div
-              {# x-show ="play" #}
               class="flex flex-col items-center"
               >            
               <div 
@@ -181,7 +172,7 @@ js_no_defer: ["/js/media.js"]
     <div
       x-show="open"
       style="display: none"
-      x-on:keydown.escape.window.prevent.stop="open = false; showimage = false"
+      x-on:keydown.escape.window.prevent.stop="open = false"
       class="fixed inset-0 overflow-y-auto"
     >
       <!-- Overlay -->
