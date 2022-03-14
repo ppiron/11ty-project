@@ -197,17 +197,17 @@ js_no_defer: ["/js/media.js"]
         class="relative flex items-center justify-center min-h-screen p-4"
       >
         <!-- Modal -->
-        <div class="flex items-center justify-center">
-        <template x-if="open">
-          <div
-            x-on:click.stop
-            x-trap.noscroll.inert="open"
-            class="min-w-[789px] aspect-[16/9] bg-white p-2 box-content"
-          >            
-               <div 
-               x-html="videos[selected]?.html" class="object-contain w-full h-full"></div> 
-          </div>          
-        </template>
+        <div class="flex items-center justify-center max-w-full">
+          <template x-if="open">
+            <div
+              x-on:click.stop
+              x-trap.noscroll.inert="open"
+              class="w-[789px] aspect-[16/9] bg-white p-2 box-content"
+            >            
+                <div 
+                x-html="videos[selected]?.html" class="object-contain w-full h-full"></div> 
+            </div>          
+          </template>
         </div>
       </div>
     </div>
