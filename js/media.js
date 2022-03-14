@@ -9,7 +9,7 @@ let photos = [
 let videos = [
   {
     thumb: "/img/video01.webp",
-    html: `<iframe class="w-full aspect-[16/9]" src="https://www.youtube.com/embed/dNGpbQu_voY?rel=0&autoplay=1" title=${this.title} frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe>`,
+    html: `<iframe rel="preload" class="w-full aspect-[16/9]" src="https://www.youtube.com/embed/dNGpbQu_voY?rel=0&autoplay=1" title=${this.title} frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe>`,
     title: 'Carlos de Seixas "Giga"',
   },
   {
